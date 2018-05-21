@@ -12,6 +12,7 @@
 		1393DDA020ADEA89008AB440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1393DD9E20ADEA89008AB440 /* Main.storyboard */; };
 		1393DDA220ADEA8F008AB440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1393DDA120ADEA8F008AB440 /* Assets.xcassets */; };
 		1393DDA520ADEA8F008AB440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1393DDA320ADEA8F008AB440 /* LaunchScreen.storyboard */; };
+		D9398EFC20B27F3B002563C1 /* StockList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9398EFB20B27F3B002563C1 /* StockList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1393DDA120ADEA8F008AB440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1393DDA420ADEA8F008AB440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1393DDA620ADEA8F008AB440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9398EFB20B27F3B002563C1 /* StockList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StockList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				1393DD9A20ADEA88008AB440 /* AppDelegate.swift */,
 				1393DD9C20ADEA88008AB440 /* ViewController.swift */,
 				1393DD9E20ADEA89008AB440 /* Main.storyboard */,
+				D9398EFB20B27F3B002563C1 /* StockList.storyboard */,
 				1393DDA120ADEA8F008AB440 /* Assets.xcassets */,
 				1393DDA320ADEA8F008AB440 /* LaunchScreen.storyboard */,
 				1393DDA620ADEA8F008AB440 /* Info.plist */,
@@ -125,6 +128,7 @@
 				1393DDA520ADEA8F008AB440 /* LaunchScreen.storyboard in Resources */,
 				1393DDA220ADEA8F008AB440 /* Assets.xcassets in Resources */,
 				1393DDA020ADEA89008AB440 /* Main.storyboard in Resources */,
+				D9398EFC20B27F3B002563C1 /* StockList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
