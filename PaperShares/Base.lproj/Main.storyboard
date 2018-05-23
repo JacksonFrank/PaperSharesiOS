@@ -21,35 +21,30 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lau-3T-Z5T">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Stocks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80E-Cz-CCB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwz-4F-YO7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
-                                        <color key="backgroundColor" red="0.086274509803921567" green="0.25098039215686274" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="65"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Live Wallpaper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOx-Ka-4Ay">
+                                        <state key="normal" title="Select Stocks"/>
+                                        <connections>
+                                            <action selector="GoToStockList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t5M-SS-4XJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CA1-os-a2x">
                                         <rect key="frame" x="0.0" y="215.5" width="375" height="216"/>
-                                        <color key="backgroundColor" red="0.062745098039215685" green="0.14117647058823529" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="65"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sX7-4z-s1s">
+                                        <state key="normal" title="Set Live Wallpaper"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGy-Mw-3bq">
                                         <rect key="frame" x="0.0" y="431.5" width="375" height="215.5"/>
-                                        <color key="backgroundColor" red="0.086274509803921567" green="0.25098039215686274" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="65"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <state key="normal" title="Settings"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="bOx-Ka-4Ay" secondAttribute="trailing" id="Fon-BJ-dXW"/>
-                                    <constraint firstItem="sX7-4z-s1s" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="VDH-iE-4gy"/>
-                                    <constraint firstAttribute="trailing" secondItem="80E-Cz-CCB" secondAttribute="trailing" id="bvp-Jf-otk"/>
-                                    <constraint firstAttribute="trailing" secondItem="sX7-4z-s1s" secondAttribute="trailing" id="hFo-cr-lTr"/>
-                                    <constraint firstItem="bOx-Ka-4Ay" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="oLO-VF-Jri"/>
-                                    <constraint firstItem="80E-Cz-CCB" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="saN-Sc-UtD"/>
+                                    <constraint firstItem="TGy-Mw-3bq" firstAttribute="top" secondItem="CA1-os-a2x" secondAttribute="bottom" id="6Cw-xc-UQZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="CA1-os-a2x" secondAttribute="trailing" id="GgE-9C-Ehc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pwz-4F-YO7" secondAttribute="trailing" id="HZb-ig-xEa"/>
+                                    <constraint firstItem="TGy-Mw-3bq" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="UVr-84-QUb"/>
+                                    <constraint firstAttribute="trailing" secondItem="TGy-Mw-3bq" secondAttribute="trailing" id="n6U-gd-0xL"/>
+                                    <constraint firstItem="CA1-os-a2x" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="vQP-8b-4BX"/>
+                                    <constraint firstItem="pwz-4F-YO7" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="yTV-RH-ij7"/>
                                 </constraints>
                             </stackView>
                         </subviews>

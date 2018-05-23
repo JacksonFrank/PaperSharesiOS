@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131255C520B5CFB900607706 /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131255C420B5CFB900607706 /* StockListViewController.swift */; };
 		1393DD9B20ADEA88008AB440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1393DD9A20ADEA88008AB440 /* AppDelegate.swift */; };
 		1393DD9D20ADEA88008AB440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1393DD9C20ADEA88008AB440 /* ViewController.swift */; };
 		1393DDA020ADEA89008AB440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1393DD9E20ADEA89008AB440 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131255C420B5CFB900607706 /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
 		1393DD9720ADEA88008AB440 /* PaperShares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperShares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1393DD9A20ADEA88008AB440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1393DD9C20ADEA88008AB440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				1393DD9A20ADEA88008AB440 /* AppDelegate.swift */,
 				1393DD9C20ADEA88008AB440 /* ViewController.swift */,
 				1393DD9E20ADEA89008AB440 /* Main.storyboard */,
+				131255C420B5CFB900607706 /* StockListViewController.swift */,
 				D9398EFB20B27F3B002563C1 /* StockList.storyboard */,
 				1393DDA120ADEA8F008AB440 /* Assets.xcassets */,
 				1393DDA320ADEA8F008AB440 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131255C520B5CFB900607706 /* StockListViewController.swift in Sources */,
 				1393DD9D20ADEA88008AB440 /* ViewController.swift in Sources */,
 				1393DD9B20ADEA88008AB440 /* AppDelegate.swift in Sources */,
 			);
