@@ -2,30 +2,34 @@
 //  StockListViewController.swift
 //  PaperShares
 //
-//  Created by Jackson Frank on 5/23/18.
+//  Created by Jackson Frank on 5/24/18.
 //  Copyright © 2018 9064. All rights reserved.
 //
 
 import UIKit
 
 class StockListViewController: UIViewController {
-    
-    @IBOutlet weak var ScrollViewView: UIView!
-    
+
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        let button1 = UIButton(frame: CGRect(x:20, y:20, width:300, height: 100))
-        button1.backgroundColor = .green
-        button1.setTitle("Stock", for: .normal)
-        button1.addTarget(self, action: Selector(("button1Action")), for: .touchUpInside)
-        self.ScrollViewView.addSubview(button1)
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    
-    func button1Action(sender: UIButton){
-        
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
-   
-    
+    */
+
 }

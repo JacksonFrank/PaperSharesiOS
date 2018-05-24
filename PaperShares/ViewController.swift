@@ -20,11 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /*
     @IBAction func GoToStockList(_ sender: UIButton) {
         let newStoryBoard = UIStoryboard(name: "StockList", bundle: nil)
-        let newVC = newStoryBoard.instantiateViewController(withIdentifier: "StockListViewController")
+        let newVC = newStoryBoard.instantiateViewController(withIdentifier: "StockListViewController") as UIViewController
         present(newVC, animated: true, completion: nil)
     }
+    */
     
 }
 
