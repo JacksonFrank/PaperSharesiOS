@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var StocksButton: UIButton!
+    @IBOutlet weak var SetWallpaperButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //StocksButton.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        //StocksButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        
+        //SetWallpaperButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        //SetWallpaperButton.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
