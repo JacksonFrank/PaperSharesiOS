@@ -13,6 +13,9 @@
 		1393DDA020ADEA89008AB440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1393DD9E20ADEA89008AB440 /* Main.storyboard */; };
 		1393DDA220ADEA8F008AB440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1393DDA120ADEA8F008AB440 /* Assets.xcassets */; };
 		1393DDA520ADEA8F008AB440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1393DDA320ADEA8F008AB440 /* LaunchScreen.storyboard */; };
+		D97AA83020B7A90200E10DD8 /* roboto_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97AA82E20B7A76B00E10DD8 /* roboto_light.ttf */; };
+		D97AA83120B7A90500E10DD8 /* roboto_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97AA82D20B7A76B00E10DD8 /* roboto_lightitalic.ttf */; };
+		D97AA83220B7A99600E10DD8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1393DDA620ADEA8F008AB440 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		1393DDA120ADEA8F008AB440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1393DDA420ADEA8F008AB440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1393DDA620ADEA8F008AB440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D97AA82D20B7A76B00E10DD8 /* roboto_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_lightitalic.ttf; sourceTree = "<group>"; };
+		D97AA82E20B7A76B00E10DD8 /* roboto_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_light.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +68,18 @@
 				1393DDA120ADEA8F008AB440 /* Assets.xcassets */,
 				1393DDA320ADEA8F008AB440 /* LaunchScreen.storyboard */,
 				1393DDA620ADEA8F008AB440 /* Info.plist */,
+				D97AA82C20B7A76200E10DD8 /* fonts */,
 			);
 			path = PaperShares;
+			sourceTree = "<group>";
+		};
+		D97AA82C20B7A76200E10DD8 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D97AA82E20B7A76B00E10DD8 /* roboto_light.ttf */,
+				D97AA82D20B7A76B00E10DD8 /* roboto_lightitalic.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97AA83020B7A90200E10DD8 /* roboto_light.ttf in Resources */,
 				1393DDA520ADEA8F008AB440 /* LaunchScreen.storyboard in Resources */,
+				D97AA83220B7A99600E10DD8 /* Info.plist in Resources */,
+				D97AA83120B7A90500E10DD8 /* roboto_lightitalic.ttf in Resources */,
 				1393DDA220ADEA8F008AB440 /* Assets.xcassets in Resources */,
 				1393DDA020ADEA89008AB440 /* Main.storyboard in Resources */,
 			);
