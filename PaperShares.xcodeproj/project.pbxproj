@@ -16,6 +16,7 @@
 		D97AA83020B7A90200E10DD8 /* roboto_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97AA82E20B7A76B00E10DD8 /* roboto_light.ttf */; };
 		D97AA83120B7A90500E10DD8 /* roboto_lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D97AA82D20B7A76B00E10DD8 /* roboto_lightitalic.ttf */; };
 		D97AA83220B7A99600E10DD8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1393DDA620ADEA8F008AB440 /* Info.plist */; };
+		D9B99BE920BA26E2007A78E8 /* StockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B99BE820BA26E2007A78E8 /* StockButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1393DDA620ADEA8F008AB440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D97AA82D20B7A76B00E10DD8 /* roboto_lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_lightitalic.ttf; sourceTree = "<group>"; };
 		D97AA82E20B7A76B00E10DD8 /* roboto_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = roboto_light.ttf; sourceTree = "<group>"; };
+		D9B99BE820BA26E2007A78E8 /* StockButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				1393DD9A20ADEA88008AB440 /* AppDelegate.swift */,
 				1393DD9C20ADEA88008AB440 /* ViewController.swift */,
 				1371033820B733330026416D /* StockListViewController.swift */,
+				D9B99BE820BA26E2007A78E8 /* StockButton.swift */,
 				1393DD9E20ADEA89008AB440 /* Main.storyboard */,
 				1393DDA120ADEA8F008AB440 /* Assets.xcassets */,
 				1393DDA320ADEA8F008AB440 /* LaunchScreen.storyboard */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B99BE920BA26E2007A78E8 /* StockButton.swift in Sources */,
 				1371033920B733330026416D /* StockListViewController.swift in Sources */,
 				1393DD9D20ADEA88008AB440 /* ViewController.swift in Sources */,
 				1393DD9B20ADEA88008AB440 /* AppDelegate.swift in Sources */,

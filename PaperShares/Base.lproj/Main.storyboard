@@ -26,19 +26,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lau-3T-Z5T">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwz-4F-YO7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pwz-4F-YO7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
                                         <color key="backgroundColor" red="0.086274509803921567" green="0.25098039215686274" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Select Stocks">
-                                                    <attributes>
-                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="72" name="Roboto-LightItalic"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="76"/>
+                                        <state key="normal" title="Select Stocks">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="G8z-Sf-VmC" kind="show" id="oDZ-7m-qUH"/>
@@ -96,11 +89,42 @@
             <objects>
                 <viewController title="StockList" id="G8z-Sf-VmC" customClass="StockListViewController" customModule="PaperShares" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9QG-LD-hvD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6U-vc-vfO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="1186"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYk-wq-ovw" userLabel="ScrollViewView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1250"/>
+                                        <color key="backgroundColor" red="0.086274509799999996" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1250" id="M8L-6X-qp1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dYk-wq-ovw" firstAttribute="top" secondItem="c6U-vc-vfO" secondAttribute="top" id="0iu-AS-xSL"/>
+                                    <constraint firstItem="dYk-wq-ovw" firstAttribute="leading" secondItem="c6U-vc-vfO" secondAttribute="leading" id="23B-7C-CYN"/>
+                                    <constraint firstAttribute="trailing" secondItem="dYk-wq-ovw" secondAttribute="trailing" id="7Ou-Y7-KcH"/>
+                                    <constraint firstAttribute="bottom" secondItem="dYk-wq-ovw" secondAttribute="bottom" id="FgS-JV-BrH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="c6U-vc-vfO" firstAttribute="leading" secondItem="q5S-Vf-r0h" secondAttribute="leading" id="6cb-Iq-yef"/>
+                            <constraint firstItem="dYk-wq-ovw" firstAttribute="width" secondItem="9QG-LD-hvD" secondAttribute="width" id="95D-8g-SiA"/>
+                            <constraint firstItem="c6U-vc-vfO" firstAttribute="top" secondItem="q5S-Vf-r0h" secondAttribute="top" id="Mq9-hY-9PJ"/>
+                            <constraint firstItem="q5S-Vf-r0h" firstAttribute="bottom" secondItem="c6U-vc-vfO" secondAttribute="bottom" id="b9O-ey-7Xt"/>
+                            <constraint firstItem="q5S-Vf-r0h" firstAttribute="trailing" secondItem="c6U-vc-vfO" secondAttribute="trailing" id="cGy-U8-jM3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q5S-Vf-r0h"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1250"/>
+                    <connections>
+                        <outlet property="ScrollViewView" destination="dYk-wq-ovw" id="B3O-fz-LzQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWP-S3-lVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

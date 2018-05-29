@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         //SetWallpaperButton.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         
         
+        
+        StocksButton.titleLabel?.textAlignment = .center
+        SetWallpaperButton.titleLabel?.textAlignment = .center
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
