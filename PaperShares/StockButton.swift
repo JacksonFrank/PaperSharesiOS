@@ -2,7 +2,7 @@
 //  StockButton.swift
 //  PaperShares
 //
-//  Created by Michele Frank on 5/26/18.
+//  Created by Jackson Frank on 5/26/18.
 //  Copyright © 2018 9064. All rights reserved.
 //
 //  This class is a subclass of the UIButton class
@@ -18,15 +18,20 @@ public class StockButton : UIButton {
     private var valueLabel:UILabel
     
     //Constructor
-    public init(stockName:String){
+    public init(stockName:String, stockValue:String){
         
         //initializes stock label based on constructor parameter
         stockLabel = UILabel()
         stockLabel.text = stockName
         
         valueLabel = UILabel()
-        //placeholder for now
-        valueLabel.text = "00.00"
+        
+        var currentValue = stockValue
+        while currentValue[currentValue.index(before: currentValue.endIndex)] == "0" {
+            currentValue.removeLast()
+        }
+        
+        valueLabel.text = currentValue
         
         //initializes button to initially have a frame of a size of 0
         super.init(frame: .zero)
@@ -38,7 +43,6 @@ public class StockButton : UIButton {
         stockLabel.text = "AAAA"
         
         valueLabel = UILabel()
-        //placeholder for now
         valueLabel.text = "00.00"
         
         super.init(coder: aDecoder)
@@ -73,7 +77,7 @@ public class StockButton : UIButton {
         stockLabel.numberOfLines = 1
         stockLabel.minimumScaleFactor = 0.01
         stockLabel.adjustsFontSizeToFitWidth = true
-        stockLabel.font = UIFont(name: stockLabel.font.fontName, size: stockLabel.font.pointSize - 10.0)
+        stockLabel.font = UIFont(name: stockLabel.font.fontName, size: stockLabel.font.pointSize - 20.0)
         
         //adds the value label to the button
         self.addSubview(valueLabel)
@@ -95,6 +99,51 @@ public class StockButton : UIButton {
         valueLabel.numberOfLines = 1
         valueLabel.minimumScaleFactor = 0.01
         valueLabel.adjustsFontSizeToFitWidth = true
-        valueLabel.font = UIFont(name: valueLabel.font.fontName, size: valueLabel.font.pointSize - 60.0)
+        valueLabel.font = UIFont(name: valueLabel.font.fontName, size: valueLabel.font.pointSize - 65.0)
+        
+        self.isUserInteractionEnabled = true
+        //self.setTitleColor(UIColor.gray, for: .highlighted)
+        self.addTarget(self, action: #selector(ButtonClicked), for: .touchUpInside)
+    }
+    
+    
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.translatesAutoresizingMaskIntoConstraints = true
+        
+        UIView.animate(withDuration: 1.0) {
+            self.stockLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
+            self.valueLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5)
+        }
+        
+        super.touchesBegan(touches, with: event)
+    }
+    
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.translatesAutoresizingMaskIntoConstraints = true
+        
+        UIView.animate(withDuration: 1.0) {
+            self.stockLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            self.valueLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        
+        super.touchesEnded(touches, with: event)
+    }
+    
+    
+    @objc func ButtonClicked(sender: UIButton!){
+        print("Added")
+        if StockInfo.StockChoices.contains(valueLabel.text!) == false {
+            if StockInfo.StockChoices.count < 6 {
+                StockInfo.StockChoices.append(valueLabel.text!)
+            }
+            else {
+                for index in 0...4 {
+                    StockInfo.StockChoices[index] = StockInfo.StockChoices[index + 1]
+                }
+            StockInfo.StockChoices[5] = stockLabel.text!
+            }
+            
+            TodayViewController.update(stockChoices: StockInfo.StockChoices)
+        }
     }
 }

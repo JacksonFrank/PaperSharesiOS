@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         
         StocksButton.titleLabel?.textAlignment = .center
-        SetWallpaperButton.titleLabel?.textAlignment = .center
+        //SetWallpaperButton.titleLabel?.textAlignment = .center
         
         
     }

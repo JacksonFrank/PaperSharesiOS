@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pwz-4F-YO7">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="301.5"/>
                                         <color key="backgroundColor" red="0.086274509803921567" green="0.25098039215686274" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="76"/>
                                         <state key="normal" title="Select Stocks">
@@ -37,17 +37,9 @@
                                             <segue destination="G8z-Sf-VmC" kind="show" id="oDZ-7m-qUH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CA1-os-a2x">
-                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
-                                        <color key="backgroundColor" red="0.062745098039215685" green="0.14117647058823529" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="72"/>
-                                        <state key="normal" title="Set Live Wallpaper">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGy-Mw-3bq">
-                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
-                                        <color key="backgroundColor" red="0.086274509803921567" green="0.25098039215686274" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="301.5"/>
+                                        <color key="backgroundColor" red="0.062745098039215685" green="0.14117647058823529" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="72"/>
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,12 +47,9 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="TGy-Mw-3bq" firstAttribute="top" secondItem="CA1-os-a2x" secondAttribute="bottom" id="6Cw-xc-UQZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="CA1-os-a2x" secondAttribute="trailing" id="GgE-9C-Ehc"/>
                                     <constraint firstAttribute="trailing" secondItem="pwz-4F-YO7" secondAttribute="trailing" id="HZb-ig-xEa"/>
                                     <constraint firstItem="TGy-Mw-3bq" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="UVr-84-QUb"/>
                                     <constraint firstAttribute="trailing" secondItem="TGy-Mw-3bq" secondAttribute="trailing" id="n6U-gd-0xL"/>
-                                    <constraint firstItem="CA1-os-a2x" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="vQP-8b-4BX"/>
                                     <constraint firstItem="pwz-4F-YO7" firstAttribute="leading" secondItem="Lau-3T-Z5T" secondAttribute="leading" id="yTV-RH-ij7"/>
                                 </constraints>
                             </stackView>
@@ -76,7 +65,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="cd5-Ah-AnG"/>
                     <connections>
-                        <outlet property="SetWallpaperButton" destination="CA1-os-a2x" id="0Lo-CE-e53"/>
                         <outlet property="StocksButton" destination="pwz-4F-YO7" id="m7n-7Y-vMg"/>
                     </connections>
                 </viewController>
@@ -97,9 +85,20 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYk-wq-ovw" userLabel="ScrollViewView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-n0-Z1F">
+                                                <rect key="frame" x="0.0" y="20" width="375" height="53"/>
+                                                <fontDescription key="fontDescription" name="Roboto-LightItalic" family="Roboto" pointSize="45"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.25098039220000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1250" id="M8L-6X-qp1"/>
+                                            <constraint firstAttribute="trailing" secondItem="s8d-n0-Z1F" secondAttribute="trailing" id="FHu-4Q-jJd"/>
+                                            <constraint firstAttribute="height" constant="1250" id="ajk-Mj-jfy"/>
+                                            <constraint firstItem="s8d-n0-Z1F" firstAttribute="leading" secondItem="dYk-wq-ovw" secondAttribute="leading" id="kkm-uR-5wB"/>
+                                            <constraint firstItem="s8d-n0-Z1F" firstAttribute="top" secondItem="dYk-wq-ovw" secondAttribute="top" constant="20" id="rSq-tv-e7N"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -123,6 +122,8 @@
                     </view>
                     <size key="freeformSize" width="375" height="1250"/>
                     <connections>
+                        <outlet property="LoadingLabel" destination="s8d-n0-Z1F" id="fXH-Er-LYs"/>
+                        <outlet property="ScrollHeight" destination="ajk-Mj-jfy" id="BkW-Mi-1HP"/>
                         <outlet property="ScrollViewView" destination="dYk-wq-ovw" id="B3O-fz-LzQ"/>
                     </connections>
                 </viewController>
